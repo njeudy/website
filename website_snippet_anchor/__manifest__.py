@@ -7,7 +7,7 @@
     "version": "10.0.1.0.0",
     "category": "Website",
     "website": "https://www.tecnativa.com",
-    "author": "Tecnativa, Odoo Community Association (OCA)",
+    "author": "Tecnativa, Nicolas JEUDY, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
