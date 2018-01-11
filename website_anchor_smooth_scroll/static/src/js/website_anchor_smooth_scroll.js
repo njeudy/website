@@ -1,11 +1,12 @@
 /* © 2016 Antiun Ingeniería S.L. - Jairo Llopis
  * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). */
+odoo.define('website_anchor_smooth_scroll.website_anchor_smooth_scroll', function (require) {
 
+require('web.dom_ready');
 "use strict";
 
 function website_anchor_smooth_scroll(event) {
     event.preventDefault();
-
     var target = $(event.target.hash);
 
     return $('html, body')
@@ -19,7 +20,8 @@ function website_anchor_smooth_scroll(event) {
     });
 }
 
-(function ($) {
+$(document).ready(function () {
     // Apply to all links that start with `#`
-    $("a[href^='#']").live("click", website_anchor_smooth_scroll);
-})(jQuery);
+    $("a[href^='#']:not([href=#])").on("click", website_anchor_smooth_scroll);
+});
+});
